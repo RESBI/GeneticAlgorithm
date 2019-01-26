@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void textToASCII(char *text, int *words, int length) {
+  for (int i=0; i<length; i++)
+    words[i] = (int)text[i];
+}
+
+int main() {
+  int length = 10;
+  char text = "HelloWorld";
+  int Words[length];
+  textToASCII(text, Words, length);
+  printf("%d", Words[0]);
+}
